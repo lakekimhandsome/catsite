@@ -17,8 +17,9 @@ function moveBall() {
   ball.style.top = `${y}px`;
 }
 
-// 공을 터치했을 때 사운드 재생
+// 공을 터치했을 때 사운드 재생 (이미 재생 중이라도 처음부터 다시 재생)
 ball.addEventListener("click", () => {
+  sound.currentTime = 0; // 사운드를 처음부터 다시 재생
   sound.play();
 });
 
